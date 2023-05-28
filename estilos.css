@@ -1,0 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra&family=Anonymous+Pro:ital@0;1&family=Azeret+Mono:wght@200&family=Courgette&family=Dancing+Script:wght@400;600&family=Delicious+Handrawn&family=Inconsolata:wght@200;300;500;600&family=Mali:ital,wght@0,300;1,300&family=Pacifico&family=Parisienne&family=Saira+Condensed:wght@300;400&family=Satisfy&family=Tangerine&family=Ysabeau:ital,wght@0,200;1,1;1,200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.principal {
+  min-height: 700px;
+  width: auto;
+  background-image: url(./img/fondo3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.principal .navbar-brand {
+  height: 120px;
+  width: auto;
+  background-color: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  animation-name: logo;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-delay: 10ms;
+  animation-duration: alternate;
+  transition: all 1ms;
+}
+@keyframes logo {
+  0% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.principal .navbar-brand .imglogo {
+  height: 70px;
+  width: 70px;
+  background-color: none;
+  padding: 5px;
+}
+.principal .navbar-brand .namelogo {
+  font-size: 30px;
+  color: #F2F2F2;
+  text-shadow: 0 0 10px #0D0D0D;
+  text-transform: uppercase;
+  font-family: "Dancing Script", cursive;
+}
+.principal .navbar-brand span {
+  text-transform: capitalize;
+}
+.principal .navbar-brand .namelogo:hover {
+  color: #730202;
+  text-shadow: 0 0 20px #F2F2F2;
+  transform: skew(150deg);
+}
+.principal .icon {
+  color: #730202;
+  font-size: 30px;
+  font-weight: bolder !important;
+}
+.principal .navbar-nav {
+  font-family: "Inconsolata", monospace;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.principal .navbar-nav .nav-link {
+  color: #730202;
+  transition: all 2s;
+}
+.principal .navbar-nav .nav-link:hover {
+  transform: scale(1.1);
+  color: #730202 !important;
+  text-shadow: 0 0 5px #F2F2F2;
+}
+.principal .text-ini {
+  text-align: center;
+  color: #730202;
+  font-size: 30px;
+  font-family: "Courgette", cursive;
+  text-shadow: 0 0 9px #F2F2F2;
+  margin-bottom: 40px;
+}
+.principal .articulos {
+  display: block;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.principal .articulos .card {
+  height: auto;
+  width: 100%;
+  background-color: rgba(250, 214, 105, 0.6352941176);
+  border: 2px solid #0D0D0D;
+  padding: 10px;
+}
+.principal .articulos .card .convenio-img,
+.principal .articulos .card .fundido-img,
+.principal .articulos .card .variedad-img {
+  height: 250px;
+  width: 100%;
+}
+.principal .articulos .card .convenio-img {
+  background-image: url("img/convenio.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.principal .articulos .card .fundido-img {
+  background-image: url("img/fundido.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.principal .articulos .card .variedad-img {
+  background-image: url("img/variedad.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.principal .articulos .card .titulo {
+  font-size: 40px;
+  color: #F2F2F2;
+  text-align: center;
+  text-shadow: 0 0 5px #0D0D0D;
+  text-transform: capitalize;
+}
+.principal .articulos .card .desc {
+  color: #F2F2F2;
+  text-align: justify;
+  text-shadow: 0 0 7px #0D0D0D;
+}
+.principal .articulos .card .boton {
+  width: 50%;
+  margin-left: 25%;
+  margin-bottom: 10px;
+  color: #730202;
+  border: 2px solid #730202;
+  display: block;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  line-height: 50px;
+  font-family: "Anonymous Pro", monospace;
+  text-transform: uppercase;
+  font-size: 22px;
+  border-radius: 40px;
+  transition: all 0.9s;
+}
+.principal .articulos .card .boton:hover {
+  color: #F2F2F2;
+  background-color: #730202;
+  transform: scale(1.1);
+  text-shadow: 0 0 18px #0D0D0D;
+}
+.principal h1 {
+  font-size: 35px;
+  font-family: "Courgette", cursive;
+  text-transform: capitalize;
+  color: #730202;
+  text-align: center;
+}
+.principal .nosotros {
+  margin-bottom: 0px;
+}
+.principal .nosotros .desc {
+  color: #F2F2F2;
+  font-size: 18px;
+  text-align: justify;
+  text-shadow: 0 0 7px #0D0D0D;
+}
+.principal h2 {
+  font-size: 35px;
+  font-family: "Courgette", cursive;
+  text-transform: capitalize;
+  color: #730202;
+  text-align: center;
+}
+.principal .nos-art {
+  display: block;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.principal .nos-art .card {
+  height: auto;
+  width: 100%;
+  background-color: rgba(250, 214, 105, 0.6352941176);
+  border: 2px solid #0D0D0D;
+  padding: 10px;
+}
+.principal .nos-art .card .convenio-img,
+.principal .nos-art .card .fundido-img,
+.principal .nos-art .card .variedad-img {
+  height: 250px;
+  width: 100%;
+}
+.principal .nos-art .card .convenio-img {
+  background-image: url("img/convenio.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.principal .nos-art .card .fundido-img {
+  background-image: url("img/fundido.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.principal .nos-art .card .variedad-img {
+  background-image: url("img/variedad.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.principal .nos-art .card .boton {
+  width: 50%;
+  margin-left: 25%;
+  color: #F2F2F2;
+  display: block;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  line-height: 50px;
+  font-family: "Anonymous Pro", monospace;
+  text-transform: uppercase;
+  font-size: 22px;
+  border-radius: 40px;
+  transition: all 0.9s;
+  text-shadow: 0 0 7px #0D0D0D;
+}
+.principal .nos-art .card .boton:hover {
+  color: #F2F2F2;
+  background-color: #730202;
+  transform: scale(1.1);
+  text-shadow: 0 0 18px #0D0D0D;
+}
+.principal .productos {
+  height: auto;
+  width: 100%;
+  background-color: none;
+  padding: 20px;
+}
+.principal .productos .prod-parr {
+  height: 70px;
+  color: #730202;
+  font-size: 45px;
+  font-family: "Dancing Script", cursive;
+  text-transform: capitalize;
+  text-align: center;
+}
+.principal .productos .amarican-img,
+.principal .productos .bluec-img,
+.principal .productos .brie-img,
+.principal .productos .cambert-img,
+.principal .productos .cheddar-img,
+.principal .productos .colby.img,
+.principal .productos .edam-img,
+.principal .productos .feta-img {
+  height: 300px;
+  width: 100%;
+  border: 2px solid #F2F2F2;
+}
+.principal .productos .amarican-img {
+  background-image: url("img/amarican.jpg");
+  background-size: cover;
+  background-position: 80%;
+  filter: sepia(100%);
+}
+.principal .productos .bluec-img {
+  background-image: url("img/bluec.jpg");
+  background-size: cover;
+  background-position: 80%;
+  filter: sepia(100%);
+}
+.principal .productos .brie-img {
+  background-image: url("img/brie.jpg");
+  background-size: cover;
+  background-position: 80%;
+  filter: sepia(100%);
+}
+.principal .productos .cambert-img {
+  background-image: url("img/cambert.jpg");
+  background-size: cover;
+  background-position: 80%;
+  filter: sepia(100%);
+}
+.principal .productos .cheddar-img {
+  background-image: url("img/cheddar.jpg");
+  background-size: cover;
+  background-position: 80%;
+  filter: sepia(100%);
+}
+.principal .productos .colby-img {
+  background-image: url("img/colby.jpg");
+  background-size: cover;
+  background-position: 80%;
+  filter: sepia(100%);
+}
+.principal .productos .edam-img {
+  background-image: url("img/edam.jpg");
+  background-size: cover;
+  background-position: 80%;
+  filter: sepia(100%);
+}
+.principal .productos .feta-img {
+  background-image: url("img/feta.jpg");
+  background-size: cover;
+  background-position: 80%;
+  filter: sepia(100%);
+}
+.principal .productos .amarican-img:hover {
+  filter: sepia(0%);
+  transform: scale(0.8);
+  transition: all 0.7s;
+}
+.principal .productos .bluec-img:hover {
+  filter: sepia(0%);
+  transform: scale(0.8);
+  transition: all 0.7s;
+}
+.principal .productos .brie-img:hover {
+  filter: sepia(0%);
+  transform: scale(0.8);
+  transition: all 0.7s;
+}
+.principal .productos .cambert-img:hover {
+  filter: sepia(0%);
+  transform: scale(0.8);
+  transition: all 0.7s;
+}
+.principal .productos .cheddar-img:hover {
+  filter: sepia(0%);
+  transform: scale(0.8);
+  transition: all 0.7s;
+}
+.principal .productos .colby-img:hover {
+  filter: sepia(0%);
+  transform: scale(0.8);
+  transition: all 0.7s;
+}
+.principal .productos .edam-img:hover {
+  filter: sepia(0%);
+  transform: scale(0.8);
+  transition: all 0.7s;
+}
+.principal .productos .feta-img:hover {
+  filter: sepia(0%);
+  transform: scale(0.8);
+  transition: all 0.7s;
+}
+.principal .productos h4 {
+  padding: 15px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #F2F2F2;
+  text-shadow: 0 0 8px #0D0D0D;
+}
+.principal .news {
+  display: block;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.principal .news .card {
+  height: auto;
+  width: 100%;
+  background-color: rgba(250, 214, 105, 0.6352941176);
+  border: 2px solid #0D0D0D;
+  padding: 10px;
+}
+.principal .news .card .pizzeria-img,
+.principal .news .card .delivery-img,
+.principal .news .card .new-img {
+  height: 250px;
+  width: 100%;
+}
+.principal .news .card .pizzeria-img {
+  background-image: url("img/pizzeria.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.principal .news .card .delivery-img {
+  background-image: url("img/delivery.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.principal .news .card .new-img {
+  background-image: url("img/new.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.principal .news .card .titulo {
+  font-size: 40px;
+  color: #F2F2F2;
+  text-align: center;
+  text-shadow: 0 0 5px #0D0D0D;
+  text-transform: capitalize;
+}
+.principal .news .card .desc {
+  color: #730202;
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-family: "Anonymous Pro", monospace;
+}
+.principal .row {
+  height: auto;
+  width: 100%;
+  background-color: none;
+}
+.principal .row .right {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #730202;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.principal .row i {
+  padding: 5px;
+}
+.principal .row form {
+  border: #730202 2px solid;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: rgba(250, 214, 105, 0.6352941176);
+}
+.principal .row form input {
+  border-radius: 30px;
+  text-transform: capitalize;
+  text-align: center;
+  text-shadow: inset 0 0 5px #D95204;
+  padding: 10px;
+  margin-left: 15%;
+}
+.principal .row form textarea {
+  border-radius: 30px;
+  text-transform: capitalize;
+  text-align: center;
+  text-shadow: inset 0 0 5px #D95204;
+  padding: 10px;
+  margin-left: 15%;
+}
+
+.footer {
+  height: 250px;
+  width: 100%;
+  background-color: #730202;
+  border: 1px solid #0D0D0D;
+  margin-top: 0px;
+}
+.footer .row {
+  font-size: 20px;
+  letter-spacing: 7px;
+  text-transform: capitalize;
+  font-family: "Ysabeau", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  margin-top: 15px;
+}
+.footer .row .acc-rig a {
+  color: #F28705;
+  text-transform: capitalize;
+  letter-spacing: 7px;
+}
+.footer .row .redes {
+  color: #F28705;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: "Anonymous Pro", monospace;
+}
+.footer .row .redes a {
+  font-size: 25px;
+  color: #F28705;
+}
+.footer .row .redes a:hover {
+  transform: scale(1.2);
+  background-color: #730202;
+  color: #F2F2F2;
+}/*# sourceMappingURL=estilos.css.map */

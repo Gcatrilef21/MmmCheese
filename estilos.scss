@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Anonymous+Pro:ital@0;1&family=Azeret+Mono:wght@200&family=Courgette&family=Dancing+Script:wght@400;600&family=Delicious+Handrawn&family=Inconsolata:wght@200;300;500;600&family=Mali:ital,wght@0,300;1,300&family=Pacifico&family=Parisienne&family=Saira+Condensed:wght@300;400&family=Satisfy&family=Tangerine&family=Ysabeau:ital,wght@0,200;1,1;1,200&display=swap');
+
+
+// paleta de colores
+$color1: #fad669a2;
+$color2: #F28705;
+$color3: #D95204;
+$color4: #F2F2F2;
+$color5: #730202;
+$color6: #0D0D0D;
+
+// tipos de letras
+
+$font1: 'Anonymous Pro',
+monospace;
+$font2: 'Courgette',
+cursive;
+$font3: 'Dancing Script',
+cursive;
+$font4: 'Inconsolata',
+monospace;
+$font5: 'Ysabeau',
+sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin one ($height, $width, $bgcolor) {
+    height: $height;
+    width: $width;
+    background-color: $bgcolor;
+}
+
+.principal {
+    min-height: 700px;
+    width: auto;
+    background-image: url(./img/fondo3.jpg);
+    background-size: cover;
+    background-position: center;
+
+    .navbar-brand {
+        @include one (120px, auto, none);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        animation-name: logo;
+        animation-iteration-count: 1;
+        animation-duration: 3s;
+        animation-delay: 10ms;
+        animation-duration: alternate;
+        transition: all 1ms;
+
+        @keyframes logo {
+            0% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .imglogo {
+            @include one(70px, 70px, none);
+            padding: 5px;
+        }
+
+        .namelogo {
+            font-size: 30px;
+            color: $color4;
+            text-shadow: 0 0 10px $color6;
+            text-transform: uppercase;
+            font-family: $font3;
+        }
+
+        span {
+            text-transform: capitalize;
+        }
+
+        .namelogo:hover {
+            color: $color5;
+            text-shadow: 0 0 20px $color4;
+            transform: skew(150deg);
+        }
+
+    }
+
+    .icon {
+        color: $color5;
+        font-size: 30px;
+        font-weight: bolder !important;
+    }
+
+    .navbar-nav {
+        font-family: $font4;
+        font-size: 20px;
+        text-transform: capitalize;
+
+        .nav-link {
+            color: $color5;
+            transition: all 2s;
+
+        }
+
+        .nav-link:hover {
+            transform: scale(1.1);
+            color: $color5 !important;
+            text-shadow: 0 0 5px $color4;
+        }
+
+    }
+
+    .text-ini {
+        text-align: center;
+        color: $color5;
+        font-size: 30px;
+        font-family: $font2;
+        text-shadow: 0 0 9px $color4;
+        margin-bottom: 40px;
+    }
+
+    .articulos {
+        display: block;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        .card {
+            @include one (auto, 100%, $color1);
+            border: 2px solid $color6;
+            padding: 10px;
+
+            .convenio-img,
+            .fundido-img,
+            .variedad-img {
+                height: 250px;
+                width: 100%;
+            }
+
+            @each $arti in convenio,
+            fundido,
+            variedad {
+                .#{$arti}-img {
+                    background-image: url("img/#{$arti}.jpg");
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+
+            .titulo {
+                font-size: 40px;
+                color: $color4;
+                text-align: center;
+                text-shadow: 0 0 5px $color6;
+                text-transform: capitalize;
+            }
+
+            .desc {
+                color: $color4;
+                text-align: justify;
+                text-shadow: 0 0 7px $color6;
+            }
+
+            .boton {
+                width: 50%;
+                margin-left: 25%;
+                margin-bottom: 10px;
+                color: $color5;
+                border: 2px solid $color5;
+                display: block;
+                justify-content: center;
+                text-align: center;
+                text-decoration: none;
+                line-height: 50px;
+                font-family: $font1;
+                text-transform: uppercase;
+                font-size: 22px;
+                border-radius: 40px;
+                transition: all 0.9s;
+            }
+
+            .boton:hover {
+                color: $color4;
+                background-color: $color5;
+                transform: scale(1.1);
+                text-shadow: 0 0 18px $color6;
+            }
+
+        }
+    }
+
+    h1 {
+        font-size: 35px;
+        font-family: $font2;
+        text-transform: capitalize;
+        color: $color5;
+        text-align: center;
+    }
+
+    // nosotros
+    .nosotros {
+        margin-bottom: 0px;
+
+        .desc {
+            color: $color4;
+            font-size: 18px;
+            text-align: justify;
+            text-shadow: 0 0 7px $color6;
+        }
+    }
+
+    h2 {
+        font-size: 35px;
+        font-family: $font2;
+        text-transform: capitalize;
+        color: $color5;
+        text-align: center;
+    }
+
+    .nos-art {
+        display: block;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        .card {
+            @include one (auto, 100%, $color1);
+            border: 2px solid $color6;
+            padding: 10px;
+
+            .convenio-img,
+            .fundido-img,
+            .variedad-img {
+                height: 250px;
+                width: 100%;
+            }
+
+            @each $arti in convenio,
+            fundido,
+            variedad {
+                .#{$arti}-img {
+                    background-image: url("img/#{$arti}.jpg");
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+
+            .boton {
+                width: 50%;
+                margin-left: 25%;
+                color: $color4;
+                display: block;
+                justify-content: center;
+                text-align: center;
+                text-decoration: none;
+                line-height: 50px;
+                font-family: $font1;
+                text-transform: uppercase;
+                font-size: 22px;
+                border-radius: 40px;
+                transition: all 0.9s;
+                text-shadow: 0 0 7px $color6;
+            }
+
+            .boton:hover {
+                color: $color4;
+                background-color: $color5;
+                transform: scale(1.1);
+                text-shadow: 0 0 18px $color6;
+            }
+        }
+    }
+
+    // fin nosotros
+    // productos
+
+    .productos {
+        @include one (auto, 100%, none);
+        padding: 20px;
+
+        .prod-parr {
+            height: 70px;
+            color: $color5;
+            font-size: 45px;
+            font-family: $font3;
+            text-transform: capitalize;
+            text-align: center;
+        }
+
+        .amarican-img,
+        .bluec-img,
+        .brie-img,
+        .cambert-img,
+        .cheddar-img,
+        .colby.img,
+        .edam-img,
+        .feta-img {
+            height: 300px;
+            width: 100%;
+            border: 2px solid $color4;
+        }
+
+        @each $quesos in amarican,
+        bluec,
+        brie,
+        cambert,
+        cheddar,
+        colby,
+        edam,
+        feta {
+            .#{$quesos}-img {
+                background-image: url("img/#{$quesos}.jpg");
+                background-size: cover;
+                background-position: 80%;
+                // filter: grayscale(100%);
+                filter: sepia(100%);
+            }
+        }
+
+        @each $quesos in amarican,
+        bluec,
+        brie,
+        cambert,
+        cheddar,
+        colby,
+        edam,
+        feta {
+            .#{$quesos}-img:hover {
+                filter: sepia(0%);
+                transform: scale(0.8);
+                transition: all 0.7s;
+            }
+        }
+
+        h4 {
+            padding: 15px;
+            ;
+            text-align: center;
+            text-transform: capitalize;
+            color: $color4;
+            text-shadow: 0 0 8px $color6;
+        }
+    }
+
+    // fin productos
+    // novedades
+    .news {
+        display: block;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        .card {
+            @include one (auto, 100%, $color1);
+            border: 2px solid $color6;
+            padding: 10px;
+
+            .pizzeria-img,
+            .delivery-img,
+            .new-img {
+                height: 250px;
+                width: 100%;
+            }
+
+            @each $news in pizzeria,
+            delivery,
+            new {
+                .#{$news}-img {
+                    background-image: url("img/#{$news}.jpg");
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+
+            .titulo {
+                font-size: 40px;
+                color: $color4;
+                text-align: center;
+                text-shadow: 0 0 5px $color6;
+                text-transform: capitalize;
+            }
+
+            .desc {
+                color: $color5;
+                text-align: center;
+                font-size: 18px;
+                text-transform: uppercase;
+                font-family: $font1;
+
+            }
+        }
+    }
+
+    // fin novedades
+    //formulario 
+    .row {
+        @include one (auto, 100%, none);
+
+        .right {
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: $color5;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        i {
+            padding: 5px;
+        }
+
+        form {
+            border: $color5 2px solid;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: $color1;
+
+
+            input {
+                border-radius: 30px;
+                text-transform: capitalize;
+                text-align: center;
+                text-shadow: inset 0 0 5px $color3;
+                padding: 10px;
+                margin-left: 15%;
+            }
+
+            textarea {
+                border-radius: 30px;
+                text-transform: capitalize;
+                text-align: center;
+                text-shadow: inset 0 0 5px $color3;
+                padding: 10px;
+                margin-left: 15%;
+
+            }
+        }
+
+    }
+
+}
+
+.footer {
+    @include one (250px, 100%, $color5);
+    border: 1px solid $color6;
+    margin-top: 0px;
+
+    .row {
+        font-size: 20px;
+        letter-spacing: 7px;
+        text-transform: capitalize;
+        font-family: $font5;
+        list-style: none;
+        text-decoration: none;
+        margin-top: 15px;
+
+        .acc-rig a {
+            color: $color2;
+            text-transform: capitalize;
+            letter-spacing: 7px;
+        }
+
+        .redes {
+            color: $color2;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-family: $font1;
+
+            a {
+                font-size: 25px;
+                color: $color2;
+            }
+
+            a:hover {
+                transform: scale(1.2);
+                background-color: $color5;
+                color: $color4;
+            }
+        }
+    }
+}
